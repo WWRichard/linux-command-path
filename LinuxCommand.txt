@@ -1,0 +1,56 @@
+python -m pip install --upgrade pip
+pip install Django APScheduler django-sslserver django-apscheduler requests pandas openpyxl xlrd ipython
+tzutil /s "China Standard Time"
+python manage.py migrate
+
+mv web.zip website.zip
+wget -c https://www.followorder.com.cn/user?download=website.zip
+wget -c https://www.followorder.com.cn/user?download=db.sqlite3
+sudo apt-get update
+sudo apt install unzip
+sudo apt install python3-pip
+sudo apt install net-tools
+sudo apt install iputils-ping
+sudp apt install p7zip-full
+sudo apt install vim
+
+echo #PATH
+sudo vim /etc/profile
+export PATH=$PATH:/home/wang/.local/bin
+
+tzselect
+sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/loacltime
+date -R
+
+ps -elf | grep do_wai
+kill -9 进程号
+
+chmod +x runma.sh
+
+#!/bin/bash
+python3 manage.py runserver 0.0.0.0:8088 &; python3 bid.py
+
+sqlite3中执行vacuum命令清理sqlite数据库
+
+nohup python3 manage.py runserver 0.0.0.0:8088 > r.log &
+nohup python3 manage.py runserver 0.0.0.0:8088 [> log.txt] &
+
+#添加开机启动
+sudo vim /etc/rc.local
+sudo chmod +x /etc/rc.local
+#!/bin/sh -e
+cd /home/wang
+bash t.sh
+exit 0
+
+
+sudo passwd root
+su root
+
+reboot
+poweroff
+shutdown -r now
+shutdown -h now
+
+IBM   go
+wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/CCChieh/IBMYes/master/install.sh && chmod +x install.sh && ./install.sh
